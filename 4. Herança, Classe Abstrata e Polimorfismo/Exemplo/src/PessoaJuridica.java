@@ -13,18 +13,8 @@ public class PessoaJuridica extends Pessoa{
                 + "\n Telefone: " + getTelefone());
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof PessoaJuridica that)) return false;
-        if (!super.equals(o)) return false;
-        return Objects.equals(cnpj, that.cnpj) && Objects.equals(razaoSocial, that.razaoSocial) && Objects.equals(nomeFantasia, that.nomeFantasia);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), cnpj, razaoSocial, nomeFantasia);
-    }
+
 
     public PessoaJuridica(String cnpj, String razaoSocial, String nomeFantasia,
                           String endereco, String telefone, String email) {

@@ -12,18 +12,7 @@ public  class PessoaFisica extends Pessoa{
                 + "\n E-mail: "+ getEmail());
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof PessoaFisica that)) return false;
-        if (!super.equals(o)) return false;
-        return Objects.equals(cpf, that.cpf) && Objects.equals(nome, that.nome);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), cpf, nome);
-    }
 
     public PessoaFisica(String cpf, String nome, String endereco, String telefone, String email) {
         super(endereco, telefone, email);
