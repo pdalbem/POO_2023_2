@@ -4,21 +4,24 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-public abstract class ConnectionFactory implements AutoCloseable {
+import java.util.logging.Logger;
+
+public abstract class ConnectionFactory  implements AutoCloseable{
     private static PreparedStatement stmt = null;
     private static Connection conn  = null;
+
 
     public  static Connection criaConexao() {
         try {
             if(conn == null)
                 conn = DriverManager.getConnection("jdbc:sqlite:aula1.db");
         }catch (SQLException e){
-         e.printStackTrace();
+            e.printStackTrace();
         }
         return conn;
     }
 
-    public static PreparedStatement criaStatement(String sql){
+    public static PreparedStatement criaStatement(String sql)  {
         try {stmt = criaConexao().prepareStatement(sql);}
         catch (SQLException e)
         { e.printStackTrace();}

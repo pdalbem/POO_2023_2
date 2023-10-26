@@ -9,7 +9,7 @@ public class Curso {
     public void salvar(){
         String sql = "INSERT INTO curso (idCurso,nome) values (?,?)";
         try(Connection conn = DriverManager.getConnection("jdbc:sqlite:aula1.db");
-            PreparedStatement stmt = conn.prepareStatement(sql);)
+            PreparedStatement stmt = conn.prepareStatement(sql))
         {
             stmt.setInt(1,getIdCurso());
             stmt.setString(2,getNome());
@@ -22,7 +22,7 @@ public class Curso {
     public void atualizar(){
         String sql = "UPDATE curso SET nome=? WHERE idCurso=?";
         try(Connection conn = DriverManager.getConnection("jdbc:sqlite:aula1.db");
-            PreparedStatement stmt = conn.prepareStatement(sql);)
+            PreparedStatement stmt = conn.prepareStatement(sql))
         {
             stmt.setString(1,getNome());
             stmt.setInt(2,getIdCurso());
@@ -35,7 +35,7 @@ public class Curso {
     public void apagar(){
         String sql = "DELETE FROM curso WHERE idCurso=?";
         try(Connection conn = DriverManager.getConnection("jdbc:sqlite:aula1.db");
-        PreparedStatement stmt = conn.prepareStatement(sql);)
+        PreparedStatement stmt = conn.prepareStatement(sql))
         {
            stmt.setInt(1,getIdCurso());
            stmt.executeUpdate();
@@ -48,7 +48,7 @@ public class Curso {
         String sql = "SELECT * FROM curso WHERE idCurso=?";
         Curso c=null;
         try(Connection conn = DriverManager.getConnection("jdbc:sqlite:aula1.db");
-            PreparedStatement stmt = conn.prepareStatement(sql);)
+            PreparedStatement stmt = conn.prepareStatement(sql))
         {
             stmt.setInt(1,param);
             ResultSet rs = stmt.executeQuery();
@@ -65,7 +65,7 @@ public class Curso {
         String sql = "SELECT * FROM curso";
         List<Curso> listaCursos =new ArrayList<>();
         try(Connection conn = DriverManager.getConnection("jdbc:sqlite:aula1.db");
-            PreparedStatement stmt = conn.prepareStatement(sql);)
+            PreparedStatement stmt = conn.prepareStatement(sql))
         {
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {

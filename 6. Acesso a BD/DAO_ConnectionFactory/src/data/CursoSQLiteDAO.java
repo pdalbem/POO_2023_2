@@ -8,6 +8,7 @@ import java.util.List;
 
 
 public  class CursoSQLiteDAO implements CursoDAO{
+
     @Override
      public  void salvar(Curso c) {
         String sql = "INSERT INTO curso values (?,?)";
@@ -19,6 +20,8 @@ public  class CursoSQLiteDAO implements CursoDAO{
             e.printStackTrace();
         }
     }
+
+
 
 
     @Override
