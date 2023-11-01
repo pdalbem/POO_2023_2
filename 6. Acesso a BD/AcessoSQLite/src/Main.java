@@ -19,15 +19,18 @@ public class Main {
          Curso c2 = new Curso(200,"Android");
          c2.salvar();
 
-        List<Curso> listaCursos;
-        listaCursos=Curso.buscarTodos();
-        for (Curso curso : listaCursos)
+       // List<Curso> listaCursos;
+       // listaCursos=Curso.buscarTodos();
+        for (Curso curso : Curso.buscarTodos())
                 curso.mostrarDados();
 
         //ATENÇÃO: Se você executar este código mais de uma vez
         // sem alterar a chave-primária do aluno, ocorrerá um erro.
         Aluno a1 = new Aluno(1,"12345","Maria",c1);
         a1.salvar();
+
+        Aluno a = Aluno.buscar(1);
+
         a1.setProntuario("123456");
         a1.atualizar();
         List<Aluno> listaAlunos;
