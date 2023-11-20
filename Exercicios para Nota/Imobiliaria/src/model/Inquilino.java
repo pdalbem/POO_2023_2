@@ -7,7 +7,7 @@ public class Inquilino extends Pessoa{
 
 
     @Override
-    public void MostrarDados() {
+    public void mostrarDados() {
         System.out.println("\nCPF: " + getCpf()
                 + "\nNome: " + getNome()
                 + "\nID do inquilino: " + this.getIdInquilino()

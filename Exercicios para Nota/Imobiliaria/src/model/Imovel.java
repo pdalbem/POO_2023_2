@@ -14,7 +14,7 @@ public class Imovel implements IMostrarDados{
 
 
     @Override
-    public void MostrarDados() {
+    public void mostrarDados() {
         System.out.println("\nID do imóvel: " + this.getIdImovel()
                             + "\nEndereço: " + this.getEndereco()
                             + "\nProprietrio: " + this.getProprietario().getNome()
@@ -28,7 +28,7 @@ public class Imovel implements IMostrarDados{
         System.out.println("Histórico de Aluguel para o Imóvel " + this.idImovel + ":");
         System.out.println("-----------------------------------------");
         for (Aluguel a : listaAlugueis)
-            a.MostrarDados();
+            a.mostrarDados();
 
 
     }

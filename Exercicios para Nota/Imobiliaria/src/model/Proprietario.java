@@ -8,7 +8,7 @@ public class Proprietario extends Pessoa {
 
 
     @Override
-    public void MostrarDados() {
+    public void mostrarDados() {
         System.out.println("\nCPF: " + getCpf()
                 + "\nNome:" + getNome()
                 + "\nID do proprietário: " + this.getIdProprietario()

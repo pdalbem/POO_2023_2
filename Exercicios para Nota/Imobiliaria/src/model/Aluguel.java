@@ -11,7 +11,7 @@ public class Aluguel implements IMostrarDados{
 
 
     @Override
-    public void MostrarDados() {
+    public void mostrarDados() {
         System.out.println("\nID do aluguel: " + this.getIdAluguel()
                             + "\nInicio do contrato: " + this.getInicioContrato()
                             + "\nFim do contrato: " + this.getFimContrato()

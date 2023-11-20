@@ -29,16 +29,16 @@ public class Main {
         aluguelDAO.salvar(aluguel1);
 
         for (Proprietario p: proprietarioDAO.buscarTodos())
-            p.MostrarDados();
+            p.mostrarDados();
 
         for (Inquilino i: inquilinoDAO.buscarTodos())
-            i.MostrarDados();
+            i.mostrarDados();
 
        for (Imovel imovel: imovelDAO.buscarTodos())
            imovel.exibirHistoricoAluguel();
 
         for (Aluguel a: aluguelDAO.buscarTodos())
-               a.MostrarDados();
+               a.mostrarDados();
 
 
     }
