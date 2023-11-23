@@ -5,6 +5,7 @@ import java.util.List;
 public interface ImovelDAO extends DAO<Imovel> {
 
     //salvar
+
     void salvar(Imovel imovel);
     //atualizar
     void alterar (Imovel imovel);

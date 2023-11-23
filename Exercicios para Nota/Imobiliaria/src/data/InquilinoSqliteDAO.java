@@ -21,12 +21,12 @@ public class InquilinoSqliteDAO implements InquilinoDAO {
 
     @Override
     public void alterar(Inquilino inquilino) {
-        String sql = "UPDATE inquilino SET ?, ?, ?, ?, WHERE idInquilino = ?";
+        String sql = "UPDATE inquilino SET cpf=?, nome=?, rendamensal=? WHERE idInquilino = ?";
         try(PreparedStatement stmt = ConnectionFactory.criaStatement(sql)){
             stmt.setString(1,inquilino.getCpf());
             stmt.setString(2,inquilino.getNome());
-            stmt.setInt(3,inquilino.getIdInquilino());
-            stmt.setDouble(4,inquilino.getRendaMensal());
+            stmt.setDouble(3,inquilino.getRendaMensal());
+            stmt.setInt(4,inquilino.getIdInquilino());
             stmt.executeUpdate();
         }catch (SQLException e) {
             e.printStackTrace();

@@ -41,5 +41,8 @@ public class Main {
                a.mostrarDados();
 
 
+        Imovel imovel3 = imovelDAO.buscar(1);
+        imovel3.exibirHistoricoAluguel();
+
     }
 }
